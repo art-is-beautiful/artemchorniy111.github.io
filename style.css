@@ -25,11 +25,48 @@ h1, h2, h3, h4, h5, h6 {
 
 /*Intro*/
 .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background: url("img/intro.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro__title {
+    color: #fff;
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+
+.intro__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto;
+    text-align: center;
+    background-color: #fff;
+}
+
+.intro__suptitle {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
 }
 
 /* Header*/
@@ -100,6 +137,80 @@ h1, h2, h3, h4, h5, h6 {
 .nav__link:hover:after {
     opacity: 1;
 }
+
+/*Button*/
+
+.btn1 {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    
+    border: 3px solid #fff;
+    
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .1s linear, color .1s linear; 
+}
+
+.btn1:hover {
+    background-color: #fff;
+    color: #fce38a;
+}
+
+/* Slider */
+
+.slider {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+     
+}
+
+.slider__item {
+    width: 23%;
+    padding: 20px 0;
+    position: relative;
+    
+    border-top: 3px solid #fff;
+    opacity: .7;
+    
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slider__item.active {
+    opacity: 1;
+}
+
+.slider__item.active:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #f38181;
+    
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+.slider_num {
+    font-size: 24px;
+    font-weight: 700;
+}
+
 
 
 
